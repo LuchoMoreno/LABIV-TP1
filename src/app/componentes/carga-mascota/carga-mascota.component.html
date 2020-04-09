@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#fff3e6;">
+    
+    <div class="Centrado" >
+
+
+        <div>
+        <label>Ingrese el nombre: </label>
+        <input [(ngModel)]= "nombre" type="text">
+        </div>
+
+        <br>
+
+        <div>
+           <label>Ingrese el URL de la imagen: </label>
+           <input [(ngModel)]= "imagen" type="text">
+        </div>
+            
+        <br>
+
+        <div>
+            <select name="seleccionTipo" [(ngModel)]="tipo">
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Pez">Pez</option>
+            </select>
+        </div>
+        
+        <br>
+
+        <input (click)="enviarAListado($event)" type="button"  value="Enviar">
+
+    </div>
+
+    <div class="Centrado" >
+
+        <div *ngFor="let mascota of lista; index as i" class="mascota" width = 50>
+        <app-mascota [mascota]="mascota"> </app-mascota>
+        <hr>
+        </div>
+        
+
+    </div>
+
+</body>
+</html>
