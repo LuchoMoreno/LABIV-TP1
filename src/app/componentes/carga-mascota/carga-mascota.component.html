@@ -5,26 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color:#fff3e6;">
+<body>
     
+
+
+    <div class="titulo" align="center">
+        <h1>VETERINARIA</h1>    
+    </div>
+
+
+
     <div class="Centrado" >
 
 
         <div>
-        <label>Ingrese el nombre: </label>
+        <label>Nombre del animal: </label>
         <input [(ngModel)]= "nombre" type="text">
         </div>
 
         <br>
 
         <div>
-           <label>Ingrese el URL de la imagen: </label>
+           <label>URL de la imagen: </label>
            <input [(ngModel)]= "imagen" type="text">
         </div>
             
         <br>
 
         <div>
+            <label>Tipo de animal: </label>
             <select name="seleccionTipo" [(ngModel)]="tipo">
                 <option value="Perro">Perro</option>
                 <option value="Gato">Gato</option>
@@ -34,19 +43,24 @@
         
         <br>
 
-        <input (click)="enviarAListado($event)" type="button"  value="Enviar">
+        <input (click)="enviarAListado($event)" type="button"  value="Enviar" class="buttonCSS">
+
 
     </div>
+
 
     <div class="Centrado" >
 
-        <div *ngFor="let mascota of lista; index as i" class="mascota" width = 50>
+    <div *ngFor="let mascota of lista; index as i" class="mascota" width = 50>
         <app-mascota [mascota]="mascota"> </app-mascota>
         <hr>
-        </div>
-        
-
     </div>
+    
+
+
+</div>
+
+   
 
 </body>
 </html>
