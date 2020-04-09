@@ -3,9 +3,9 @@ import { Component, OnInit} from '@angular/core';
 import { Mascota } from '../../Clases/Mascota/mascota';
 
 
-
 // 1- Crear un componente 'carga-mascota' que nos permita cargar nombre, imagen (con inputs) y 
 // tipo (con select) y que devuelva por medio de un output los datos cargados.
+
 
 
 @Component({
