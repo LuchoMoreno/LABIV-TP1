@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 
-import { Mascota } from 'src/app/Clases/Mascota/mascota';
+import { Mascota } from '../../Clases/Mascota/mascota';
 
 
 
